@@ -1,6 +1,14 @@
 -- Keep only your personal input overrides here. Uncommented settings below
 -- replace Omarchy's defaults.
 
+-- Force software cursor rendering on NVIDIA RTX 50-series to avoid cursor
+-- desyncs with window damage tracking.
+hl.config({
+  cursor = {
+    no_hardware_cursors = true,
+  },
+})
+
 -- Keyboard layout and options.
 -- See https://wiki.hypr.land/Configuring/Basics/Variables/#input
 -- hl.config({

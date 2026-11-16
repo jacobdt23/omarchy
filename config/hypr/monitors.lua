@@ -20,7 +20,11 @@
 
 -- GTK and XWayland scale, a whole number (Omarchy sets 2 until a scale is
 -- chosen in the panel, then follows the lowest monitor scale).
--- hl.env("GDK_SCALE", "1")
+hl.env("GDK_SCALE", "1")
+
+-- Dual 1080p@100 desktop monitors (RTX 5070).
+hl.monitor({ output = "HDMI-A-1", mode = "1920x1080@100", position = "0x0", scale = 1 })
+hl.monitor({ output = "DP-2", mode = "1920x1080@100", position = "1920x0", scale = 1 })
 
 -- Keep a monitor off, such as the phantom output an Apple 6K XDR can show.
 -- hl.monitor({ output = "DP-3", disabled = true })
