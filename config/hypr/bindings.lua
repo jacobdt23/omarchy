@@ -12,6 +12,12 @@
 -- To disable all preinstalled app/webapp bindings, set:
 --   omarchy_preinstalled_bindings = false
 
+-- Tailored bindings from your previous Hyprland setup (preserving Omarchy defaults).
+-- Tap Super via keyd (/etc/keyd/default.conf emits F24 on Left Meta tap) -> App Launcher.
+o.bind("F24", "Apps", "omarchy-shell omarchy.dock apps")
+o.bind("SUPER + E", "Thunar", o.launch("thunar"))
+o.bind("SUPER + SHIFT + ESCAPE", "Activity", { tui = "btop" })
+
 -- Add a new binding.
 -- o.bind("SUPER + SHIFT + R", "SSH", "alacritty -e ssh your-server")
 

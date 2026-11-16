@@ -30,3 +30,5 @@ require("default.hypr.toggles")
 
 -- Add any other personal Hyprland configuration below.
 -- o.window("qemu", { workspace = "5" })
+o.window(".*[Tt]imeshift.*", { float = true, center = true, size = { 900, 620 } })
+o.window(".*pavucontrol.*", { float = true, center = true, size = { 760, 520 } })

@@ -1,5 +1,36 @@
 -- Change the default Omarchy look'n'feel.
 
+-- Frosted glass, subtle shadows, and rounded corners tailored from your previous setup
+-- while letting Omarchy's active theme drive border colors.
+hl.config({
+  general = {
+    gaps_in = 3,
+    gaps_out = 6,
+  },
+
+  decoration = {
+    rounding = 10,
+    active_opacity = 1.0,
+    inactive_opacity = 0.94,
+
+    shadow = {
+      enabled = true,
+      range = 14,
+      render_power = 3,
+      color = "rgba(00000066)",
+    },
+
+    blur = {
+      enabled = true,
+      size = 8,
+      passes = 3,
+      vibrancy = 0.18,
+      new_optimizations = true,
+      xray = false,
+    },
+  },
+})
+
 -- Opt another application in to Omarchy's standard transparency.
 -- Find its class with: hyprctl clients
 -- o.transparent_window("my-app")

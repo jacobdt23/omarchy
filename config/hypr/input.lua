@@ -1,11 +1,11 @@
 -- Keep only your personal input overrides here. Uncommented settings below
 -- replace Omarchy's defaults.
 
--- Force software cursor rendering on NVIDIA RTX 50-series to avoid cursor
--- desyncs with window damage tracking.
+-- Hardware cursors stay enabled for lower-latency 100Hz pointer tracking on
+-- RTX 5070; flip to true if you ever see cursor/damage-tracking artifacts.
 hl.config({
   cursor = {
-    no_hardware_cursors = true,
+    no_hardware_cursors = false,
   },
 })
 
