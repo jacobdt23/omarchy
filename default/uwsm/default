@@ -17,6 +17,13 @@ export EDITOR="omarchy-launch-editor --inline"
 # hyprwm/Hyprland#16648 is fixed. Set HYPRLAND_NO_RT=0 to opt back in.
 export HYPRLAND_NO_RT=1
 
+# Work around NVIDIA R620 (620.70.06+) + Aquamarine 0.16 DRM atomic page-flip
+# timeouts (nv_drm_atomic_commit: Flip event timeout on head 0) by falling back
+# to Aquamarine's legacy DRM modesetting path unless explicitly overridden.
+if command -v omarchy-hw-nvidia >/dev/null 2>&1 && omarchy-hw-nvidia; then
+  export AQ_NO_ATOMIC=${AQ_NO_ATOMIC:-1}
+fi
+
 # Bitwarden keeps its key in memfd_secret memory, which turns hibernation off while it runs.
 # When every swap a hibernation image can go to is encrypted, let it use locked memory instead.
 if omarchy-hibernation-encrypted; then

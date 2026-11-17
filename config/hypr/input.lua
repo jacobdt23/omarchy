@@ -1,11 +1,11 @@
 -- Keep only your personal input overrides here. Uncommented settings below
 -- replace Omarchy's defaults.
 
--- Hardware cursors stay enabled for lower-latency 100Hz pointer tracking on
--- RTX 5070; flip to true if you ever see cursor/damage-tracking artifacts.
+-- Use software cursors on NVIDIA/RTX 5070 to avoid KMS cursor-plane atomic
+-- page-flip timeouts and damage-tracking desyncs.
 hl.config({
   cursor = {
-    no_hardware_cursors = false,
+    no_hardware_cursors = true,
   },
 })
 

@@ -29,6 +29,12 @@ hl.config({
       xray = false,
     },
   },
+
+  render = {
+    -- Keep compositing active on fullscreen windows on NVIDIA to avoid
+    -- direct-scanout page-flip timeouts.
+    direct_scanout = 0,
+  },
 })
 
 -- Opt another application in to Omarchy's standard transparency.
